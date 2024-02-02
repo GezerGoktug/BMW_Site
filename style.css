@@ -1,0 +1,57 @@
+* {
+  scroll-behavior: smooth;
+}
+/*! Screen open animation  */
+@keyframes bodyAnimate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body {
+  animation-name: bodyAnimate;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-duration: 0.8s;
+}
+
+nav {
+  z-index: 1000;
+}
+#cookies {
+  z-index: 1200;
+}
+
+#toggle-bar {
+  background-color: rgba(0, 0, 0, 0.553);
+  z-index: 1500;
+}
+header section {
+  height: calc(100vh - 112px);
+}
+.design-options select {
+  border-radius: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.design-options select option {
+  padding: 40px;
+  transition: all 0.3s ease-in;
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel-item {
+    flex: 0 0 auto;
+    width: calc(50% - 12px);
+  }
+}
